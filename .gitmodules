@@ -1,0 +1,3 @@
+[submodule "dependences/django-1.7-dev"]
+	path = dependences/django-1.7-dev
+	url = git://github.com/archen/django.git
