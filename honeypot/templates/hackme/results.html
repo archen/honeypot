@@ -1,4 +1,8 @@
-<h1>{{ question.question_text }}</h1>
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>{{ question.question_text }}</h2>
 
 <ul>
 {% for choice in question.choice_set.all %}
@@ -7,3 +11,5 @@
 </ul>
 
 <a href="{% url 'hackme:detail' question.id %}">Vote again?</a>
+
+{% endblock %}

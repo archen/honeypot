@@ -1,1 +1,1 @@
-Django
+./dependencies/django-1.7-dev

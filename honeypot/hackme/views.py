@@ -1,6 +1,8 @@
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 from django.views import generic
 from django.utils import timezone
 
@@ -37,6 +39,7 @@ class ResultsView(generic.DetailView):
     template_name = 'hackme/results.html'
 
 
+@login_required
 def vote(request, question_id):
     p = get_object_or_404(Question, pk=question_id)
     try:
