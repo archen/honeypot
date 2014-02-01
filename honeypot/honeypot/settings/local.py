@@ -49,10 +49,13 @@ CACHES = {
 
 ########## TOOLBAR CONFIGURATION
 # See: https://github.com/django-debug-toolbar/django-debug-toolbar#installation
+"""
+Removed until debug_toolbar is updated for Django 1.7
 INSTALLED_APPS += (
     'debug_toolbar',
 )
 
+"""
 # See: https://github.com/django-debug-toolbar/django-debug-toolbar#installation
 INTERNAL_IPS = ('127.0.0.1',)
 
