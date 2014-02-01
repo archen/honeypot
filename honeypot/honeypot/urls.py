@@ -11,7 +11,7 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'honeypot.views.home', name='home'),
     # url(r'^honeypot/', include('honeypot.foo.urls')),
-
+    url(r'^hackme/', include('hackme.urls', namespace="hackme")),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
