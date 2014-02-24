@@ -34,6 +34,10 @@ DATABASES = {
         'PORT': '',
     }
 }
+
+FIXTURE_DIRS = {
+    normpath(join(DJANGO_ROOT, '../utils/fixtures/')),
+}
 ########## END DATABASE CONFIGURATION
 
 
