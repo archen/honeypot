@@ -34,7 +34,16 @@ class CSRFTests(TestCase):
         # todo: add settings for test URL
         response = csrf_client.post(reverse('hackme:vote', kwargs={'question_id': 1}),
                                     post_data, follow=True)
+
+        post_data = {
+            'choice': 1,
+        }
+
+        response2 = csrf_client.post(reverse('hackme:vote', kwargs={'question_id': 1}),
+                                     post_data, follow=True)
+
         self.assertEqual(response.status_code, 200)
+        self.assertEqual(response2.status_code, 403)
 
     def test_csrf_token_session_rotation(self):
         """
